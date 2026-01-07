@@ -272,7 +272,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from sentence_transformers import SentenceTransformer, models
 
 # Output docx
-from docx import Document as DC
+from docx import Document
 
 # Google Gemini
 import google.generativeai as genai
@@ -506,7 +506,7 @@ if st.sidebar.button("🚀 Generate SEO Content"):
     else:
         progress_bar = st.progress(0)
         status_text = st.empty()
-        doc = DC()
+        doc = Document()
 
         total_steps = max(1, len(base_urls)) * 4  # 4 steps per URL
         current_step = 0
