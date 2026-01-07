@@ -392,6 +392,7 @@ def load_gemini_client():
         genai.configure(api_key=st.secrets["gemini_api"])
         # return genai.GenerativeModel("gemini-2.5-pro")
         return genai.GenerativeModel("gemini-2.5-flash")
+        # return genai.GenerativeModel("gemini-1.5-flash")
     return None
 
 encoder, embeddings = load_encoder_and_embeddings()
