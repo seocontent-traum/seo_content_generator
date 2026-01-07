@@ -391,7 +391,7 @@ def load_gemini_client():
     if "gemini_api" in st.secrets:
         genai.configure(api_key=st.secrets["gemini_api"])
         # return genai.GenerativeModel("gemini-2.5-pro")
-        return genai.GenerativeModel("gemini-1.5-flash-latest")
+        return genai.GenerativeModel("gemini-1.5-flash")
     return None
 
 encoder, embeddings = load_encoder_and_embeddings()
